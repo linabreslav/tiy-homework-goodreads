@@ -1,0 +1,631 @@
+
+$purple: #4a4a93;
+$font: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+
+
+body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, a, ul, li {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+
+// header and hero
+
+header {
+  height: 450px;
+
+  .nav {
+    float: right;
+  }
+
+  .hammenu {
+    height: 30px;
+    width: auto;
+    float: right;
+    position: relative;
+    top: 40px;
+    right: 50px;
+  }
+
+  .sub-menu{
+    position: absolute;
+    left:86%;
+    top: 75px;
+    display: none;
+  }
+
+  .hamburger {
+    a:hover{
+      color: $purple;
+    }
+  }
+
+  .hamburger:hover .sub-menu {
+    display: block;
+  }
+
+  .sub-menu li {
+    width: 150px;
+    text-align: right;
+    padding: 5px 0px;
+  }
+
+  .sub-menu a {
+    color: white;
+    padding: 20px;
+    text-align: left;
+    text-decoration: none;
+    font-family: $font;
+  }
+
+  .hammenu:hover {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+
+  .hero {
+    background-image: url("../images/photo-1466770862531-457e6c8a7e63.jpeg");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
+    width: auto;
+    height: 450px;
+  }
+
+  .logo {
+    height: 125px;
+    width: auto;
+    position: relative;
+    bottom: 160px;
+    right: 30px;
+    left: 10px;
+  }
+
+
+  .slogan{
+    padding: 5px;
+    text-align: center;
+    padding-top: 8%;
+  }
+
+  .slogan h3 {
+    font-family: $font;
+    color: black;
+    font-size: 20px;
+    font-weight: lighter;
+  }
+
+  .headerslogan2 {
+    font-family: $font;
+    font-weight: bold;
+    display: inline;
+    padding: 5px;
+  }
+
+  .slogan .secondline {
+    padding-left: 50px;
+  }
+
+  p {
+    color: white;
+    font-family: $font;
+    font-size: 130px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    text-align: center;
+    padding-left: 20px;
+  }
+
+
+  .shelfmenu {
+    list-style-type: none;
+    text-align: center;
+    margin: 0px 20px;
+    width: 100%;
+  }
+
+
+  .shelfmenu li {
+    display: inline-block;
+    margin: 0px 30px;
+    margin-top: 10px;
+
+  }
+
+  .shelfmenu a {
+    color: white;
+    text-decoration: none;
+    font-family: $font;
+    font-size: 20px;
+    padding: 0 5%;
+  }
+
+  a:hover {
+   font-weight: bolder;
+ }
+
+
+  .shelfclass {
+    background-color: black;
+    height: 50px;
+    }
+
+  .dropdown {
+    position: relative;
+
+  a:hover{
+    color: $purple;
+  }
+
+}
+
+.dropdown:hover .drop-nav{
+  display: block;
+
+}
+
+.drop-nav {
+  clear: both;
+  display: none;
+  position: absolute;
+
+}
+
+.drop-nav li {
+  display: block;
+}
+
+.drop-nav a {
+  color: black;
+}
+
+.drop-nav a:hover {
+  font-weight: bold;
+}
+
+
+
+
+// search icon
+
+$size: 20px;
+
+.search-bar {
+  height: auto;
+  width: auto;
+  position: relative;
+  top: 10px;
+  left: 250px;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+
+  input {
+    height: 44px;
+    width: 44px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: $font;
+    border: $size/10 solid white;
+    border-radius: 44px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.5s ease-out;
+
+    color: transparent;
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:invalid {
+      box-shadow: none;
+    }
+
+    &:hover {
+      border: $size/10 solid #FFF;
+      box-shadow: 0 0 $size/10 $size/10 #EEE;
+    }
+
+    &:focus, &:valid {
+      width: 300px;
+      border: $size/10 solid #CCC;
+      outline: none;
+      cursor: auto;
+      background-color: #FFF;
+      color: #000;
+
+      &::placeholder {
+        color: #999;
+      }
+
+      + .search-icon {
+        z-index: 0;
+        border-color: #bebebe;
+        right: 20px;
+
+        &:after {
+          background-color: #CCC;
+        }
+      }
+    }
+  }
+}
+
+
+
+.search-icon {
+  display: inline-block;
+  height: $size;
+  width: $size;
+  border-radius: 50%;
+  border: $size/10 solid white;
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  z-index: -1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: $size/2 + $size/4*1.414 + $size/10;
+    left: $size/2 + $size/4*1.414;
+    transform: rotate(45deg);
+    height: $size/10;
+    width: $size/2;
+    background-color: white;
+    border-radius: 10px;
+  }
+}
+}
+
+.mobilemenu {
+  display:  none;
+}
+
+
+section {
+  height: auto;
+  clear: both;
+
+  .books {
+    text-align: center;
+    margin-top: 10%;
+    padding: 10px;
+  }
+
+  div {
+    float: left;
+    padding: 4% 3.5%;
+  }
+
+  img {
+    height: 190px;
+  }
+}
+
+// book image animation
+
+@keyframes bounceIn {
+
+    60% {
+      transform: scale(.8);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.bookimg img:first-of-type:hover {
+  animation-duration: .7s;
+  animation-name: bounceIn;
+}
+
+  h3 {
+    font-family: $font;
+  }
+
+  h4 {
+    font-family: $font;
+  }
+
+  .dots {
+    width: 203px;
+    height: auto;
+  }
+
+
+
+
+
+footer {
+  clear: both;
+  color: white;
+  background-color: $purple;
+  font-family: $font;
+  text-align: center;
+  clear: both;
+  height: 20%;
+
+    h4 {
+      padding: 2%;
+    }
+
+    ul {
+      text-align: center;
+      padding: 2%;
+    }
+
+    li {
+      list-style: none;
+      display: inline;
+    }
+
+    a {
+      color: white;
+      font-family: $font;
+      text-decoration: none;
+      padding: 0 3%;
+    }
+
+    a:hover {
+      font-weight: bold;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+
+
+header {
+
+
+  p {
+    font-size: 100px;
+  }
+
+  .logo {
+    padding-top: 2%;
+    height: 130px;
+  }
+
+  .shelfmenu a {
+    font-size: 20px;
+    padding: 0px 10px;
+  }
+
+  .shelfmenu li {
+    margin: 10px 5px;;
+  }
+
+  .sub-menu{
+    position: absolute;
+    left:80%;
+    top: 75px;
+    display: none;
+  }
+
+
+  .sub-menu a {
+    font-size: 20px;
+  }
+
+  .drop-nav a{
+    font-size: 20px;
+    padding: 7px;
+    margin: 2px;
+  }
+
+
+  .hammenu {
+    height: 40px;
+    width: auto;
+    float: right;
+    position: relative;
+    top: 40px;
+    right: 50px;
+  }
+
+
+.slogan h3 {
+  font-family: $font;
+  color: black;
+  font-size: 25px;
+  font-weight: lighter;
+}
+
+.search-icon {
+  display: none;
+}
+
+.search-bar {
+  display: none;
+}
+
+}
+
+section {
+  height: auto;
+  clear: both;
+  padding-left: 4%;
+
+  .books {
+    text-align: center;
+    margin: 1%;
+    margin-top: 16%;
+  }
+
+  div {
+    float: left;
+    padding: 5% 3%;
+  }
+  img {
+    height: 210px;
+    }
+
+  }
+
+}
+
+@media (max-width: 599px) {
+  header {
+    height: 250px;
+
+      .hero {
+        height: 75%;
+      }
+
+      .slogan {
+        display: none;
+      }
+
+      .search-icon {
+        display:none;
+      }
+
+      .search-bar {
+        display:none;
+      }
+
+      p {
+        font-size: 60px;
+        padding-top: 120px;
+      }
+
+
+    .hammenu {
+      position: absolute;
+      top: 2%;
+      right: 2%;
+    }
+    .logo {
+      height: 70px;
+      position: absolute;
+      top: 85px;
+    }
+
+
+    .shelfmenu {
+      display: none;
+    }
+
+  }
+
+  .mobilemenu {
+    display: block;
+
+    ul {
+      text-align: center;
+    }
+
+      li {
+        position: relative;
+        list-style: none;
+        display: inline;
+
+          li:hover {
+            font-weight: bold;
+          }
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-family: $font;
+        padding: 0px 30px;
+        margin: 10px;
+        font-size: 30px;
+        border: 2px black solid;
+        border-radius: 7px;
+      }
+
+      a:hover {
+        font-weight: bold;
+        color: black;
+      }
+
+      .drop-nav, .drop-nav2{
+        position: absolute;
+        display: none;
+      }
+
+      .drop-nav li a, .drop-nav2 li a  {
+        font-size: 25px;
+      }
+
+      .dropdown {
+        a:hover{
+          color: $purple;
+        }
+      }
+
+      .dropdown:hover .drop-nav,  {
+        display: block;
+      }
+
+      .dropdown:hover .drop-nav2,  {
+        display: block;
+      }
+
+      .drop-nav li {
+        width: 150px;
+        text-align: right;
+        left: 8%;
+        position: relative;
+      }
+
+      .drop-nav2 li {
+        width: 150px;
+        position: relative;
+        left: 110%;
+      }
+
+      .drop-nav a, .drop-nav2 a {
+        color: black;
+        padding: 20px;
+        font-size: 30px;
+        text-align: left;
+        text-decoration: none;
+        font-family: $font;
+        border: none;
+      }
+
+  }
+
+
+  section {
+    height: auto;
+    clear: both;
+    padding-left: 15%;
+    padding-top: 90px;
+
+    .books {
+      text-align: center;
+      margin: 1%;
+    }
+
+    div {
+      float: left;
+      padding: 3%;
+    }
+    img {
+      height: 300px;
+      }
+
+    }
+
+
+  }
