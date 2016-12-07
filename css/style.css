@@ -43,155 +43,167 @@ header {
     -moz-transform: rotate(90deg);
     transform: rotate(90deg); }
   header .hero {
-    background-image: url("../images/photo-1466770862531-457e6c8a7e63.jpeg");
     background-position: top;
-    background-size: contain;
     background-repeat: no-repeat;
-    background-color: black;
     width: auto;
-    height: 450px; }
-  header .logo {
-    height: 125px;
-    width: auto;
-    position: relative;
-    bottom: 160px;
-    right: 30px;
-    left: 10px; }
-  header .slogan {
-    padding: 5px;
-    text-align: center;
-    padding-top: 8%; }
-  header .slogan h3 {
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-    color: black;
-    font-size: 20px;
-    font-weight: lighter; }
-  header .headerslogan2 {
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-    font-weight: bold;
-    display: inline;
-    padding: 5px; }
-  header .slogan .secondline {
-    padding-left: 50px; }
-  header p {
-    color: white;
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-    font-size: 130px;
-    text-transform: uppercase;
-    font-weight: lighter;
-    text-align: center;
-    padding-left: 20px; }
-  header .shelfmenu {
-    list-style-type: none;
-    text-align: center;
-    margin: 0px 20px;
-    width: 100%; }
-  header .shelfmenu li {
-    display: inline-block;
-    margin: 0px 30px;
-    margin-top: 10px; }
-  header .shelfmenu a {
-    color: white;
-    text-decoration: none;
-    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-    font-size: 20px;
-    padding: 0 5%; }
-  header a:hover {
-    font-weight: bolder; }
-  header .shelfclass {
-    background-color: black;
-    height: 50px; }
-  header .dropdown {
-    position: relative; }
-    header .dropdown a:hover {
-      color: #4a4a93; }
-  header .dropdown:hover .drop-nav {
-    display: block; }
-  header .drop-nav {
-    clear: both;
-    display: none;
-    position: absolute; }
-  header .drop-nav li {
-    display: block; }
-  header .drop-nav a {
-    color: black; }
-  header .drop-nav a:hover {
-    font-weight: bold; }
-  header .search-bar {
-    height: auto;
-    width: auto;
-    position: relative;
-    top: 10px;
-    left: 250px;
-    display: inline-block;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box; }
-    header .search-bar input {
-      height: 44px;
-      width: 44px;
-      padding: 10px 20px;
-      box-sizing: border-box;
-      font-size: 18px;
-      font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-      border: 2px solid white;
-      border-radius: 44px;
-      cursor: pointer;
-      background-color: transparent;
-      transition: all 0.5s ease-out;
-      color: transparent; }
-      header .search-bar input::placeholder {
-        color: transparent; }
-      header .search-bar input:invalid {
-        box-shadow: none; }
-      header .search-bar input:hover {
-        border: 2px solid #FFF;
-        box-shadow: 0 0 2px 2px #EEE; }
-      header .search-bar input:focus, header .search-bar input:valid {
-        width: 300px;
-        border: 2px solid #CCC;
-        outline: none;
-        cursor: auto;
-        background-color: #FFF;
-        color: #000; }
-        header .search-bar input:focus::placeholder, header .search-bar input:valid::placeholder {
-          color: #999; }
-        header .search-bar input:focus + .search-icon, header .search-bar input:valid + .search-icon {
-          z-index: 0;
-          border-color: #bebebe;
-          right: 20px; }
-          header .search-bar input:focus + .search-icon:after, header .search-bar input:valid + .search-icon:after {
-            background-color: #CCC; }
-  header .search-icon {
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    border: 2px solid white;
-    position: absolute;
-    right: 12px;
-    top: 8px;
+    height: 450px;
     z-index: -1; }
-    header .search-icon:after {
-      content: '';
+    header .hero .my-slider ul li img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      z-index: -1; }
+    header .hero .my-slider {
+      height: 450px;
+      z-index: -1; }
+    header .hero .unslider-nav {
+      background-color: black; }
+    header .hero .logo {
+      height: 150px;
       position: absolute;
-      top: 19.07px;
-      left: 17.07px;
-      transform: rotate(45deg);
-      height: 2px;
-      width: 10px;
-      background-color: white;
-      border-radius: 10px; }
+      bottom: 55%;
+      left: 17%;
+      z-index: 400; }
+    header .hero #maintitle {
+      color: white;
+      font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+      font-size: 130px;
+      text-transform: uppercase;
+      font-weight: 200;
+      text-align: center;
+      position: absolute;
+      margin: 20% 20% 10% 22%;
+      padding: 0px 2%;
+      bottom: 1%;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.6); }
+    header .hero .slogan {
+      text-align: left;
+      z-index: 500;
+      position: absolute;
+      top: 72%;
+      left: 45%; }
+    header .hero .slogan h3 {
+      font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+      color: white;
+      font-size: 30px;
+      font-weight: lighter; }
+    header .hero .headerslogan2 {
+      font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+      font-weight: bold;
+      display: inline; }
+    header .hero .shelfmenu {
+      list-style-type: none;
+      text-align: center;
+      margin: 0px 20px;
+      width: 100%; }
+    header .hero .shelfmenu li {
+      display: inline-block;
+      margin: 0px 30px;
+      margin-top: 10px; }
+    header .hero .shelfmenu a {
+      color: white;
+      text-decoration: none;
+      font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+      font-size: 20px;
+      padding: 0 5%; }
+    header .hero a:hover {
+      font-weight: bolder; }
+    header .hero .shelfclass {
+      background-color: black;
+      height: 50px; }
+    header .hero .dropdown {
+      position: relative; }
+      header .hero .dropdown a:hover {
+        color: #4a4a93; }
+    header .hero .dropdown:hover .drop-nav {
+      display: block; }
+    header .hero .drop-nav {
+      clear: both;
+      display: none;
+      position: absolute; }
+    header .hero .drop-nav li {
+      display: block; }
+    header .hero .drop-nav a {
+      color: black; }
+    header .hero .drop-nav a:hover {
+      font-weight: bold; }
+    header .hero .search-bar {
+      height: auto;
+      width: auto;
+      position: relative;
+      top: 10px;
+      left: 250px;
+      display: inline-block;
+      transform: translate(-50%, -50%);
+      box-sizing: border-box; }
+      header .hero .search-bar input {
+        height: 44px;
+        width: 44px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        font-size: 18px;
+        font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+        border: 2px solid white;
+        border-radius: 44px;
+        cursor: pointer;
+        background-color: transparent;
+        transition: all 0.5s ease-out;
+        color: transparent; }
+        header .hero .search-bar input::placeholder {
+          color: transparent; }
+        header .hero .search-bar input:invalid {
+          box-shadow: none; }
+        header .hero .search-bar input:hover {
+          border: 2px solid #FFF;
+          box-shadow: 0 0 2px 2px #EEE; }
+        header .hero .search-bar input:focus, header .hero .search-bar input:valid {
+          width: 300px;
+          border: 2px solid #CCC;
+          outline: none;
+          cursor: auto;
+          background-color: #FFF;
+          color: #000; }
+          header .hero .search-bar input:focus::placeholder, header .hero .search-bar input:valid::placeholder {
+            color: #999; }
+          header .hero .search-bar input:focus + .search-icon, header .hero .search-bar input:valid + .search-icon {
+            z-index: 0;
+            border-color: #bebebe;
+            right: 20px; }
+            header .hero .search-bar input:focus + .search-icon:after, header .hero .search-bar input:valid + .search-icon:after {
+              background-color: #CCC; }
+    header .hero .search-icon {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      border: 2px solid white;
+      position: absolute;
+      right: 12px;
+      top: 8px;
+      z-index: -1; }
+      header .hero .search-icon:after {
+        content: '';
+        position: absolute;
+        top: 19.07px;
+        left: 17.07px;
+        transform: rotate(45deg);
+        height: 2px;
+        width: 10px;
+        background-color: white;
+        border-radius: 10px; }
 
 .mobilemenu {
   display: none; }
 
 section {
   height: auto;
-  clear: both; }
+  clear: both;
+  width: 100%; }
   section .books {
     text-align: center;
     margin-top: 10%;
-    padding: 10px; }
+    width: 100%; }
   section div {
     float: left;
     padding: 4% 3.5%; }

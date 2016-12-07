@@ -26,6 +26,7 @@ header {
     float: right;
   }
 
+// HAMBURGER
   .hammenu {
     height: 30px;
     width: auto;
@@ -48,6 +49,7 @@ header {
     }
   }
 
+// DROPS DOWN FROM HAMBURGER
   .hamburger:hover .sub-menu {
     display: block;
   }
@@ -72,37 +74,74 @@ header {
     transform: rotate(90deg);
   }
 
-
+// BACKGROUND IMAGE
   .hero {
-    background-image: url("../images/photo-1466770862531-457e6c8a7e63.jpeg");
     background-position: top;
-    background-size: contain;
     background-repeat: no-repeat;
-    background-color: black;
     width: auto;
     height: 450px;
+    z-index: -1;
+
+
+  .my-slider ul li img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    z-index: -1;
+
   }
+
+  .my-slider {
+    height: 450px;
+    z-index: -1;
+  }
+
+  .unslider-nav {
+    background-color: black;
+  }
+
+  // LOGO
 
   .logo {
-    height: 125px;
-    width: auto;
-    position: relative;
-    bottom: 160px;
-    right: 30px;
-    left: 10px;
+    height: 150px;
+    position: absolute;
+    bottom: 55%;
+    left: 17%;
+    z-index:400;
   }
 
 
-  .slogan{
-    padding: 5px;
+
+  // TITLE
+  #maintitle {
+    color: white;
+    font-family: $font;
+    font-size: 130px;
+    text-transform: uppercase;
+    font-weight: 200;
     text-align: center;
-    padding-top: 8%;
+    position: absolute;
+    margin: 20% 20% 10% 22%;
+    padding: 0px 2%;
+    bottom: 1%;
+    z-index: 1;
+    background-color: rgba(black, .6);
+  }
+
+
+// SLOGAN
+  .slogan{
+    text-align: left;
+    z-index: 500;
+    position: absolute;
+    top: 72%;
+    left: 45%;
   }
 
   .slogan h3 {
     font-family: $font;
-    color: black;
-    font-size: 20px;
+    color: white;
+    font-size: 30px;
     font-weight: lighter;
   }
 
@@ -110,24 +149,11 @@ header {
     font-family: $font;
     font-weight: bold;
     display: inline;
-    padding: 5px;
-  }
-
-  .slogan .secondline {
-    padding-left: 50px;
-  }
-
-  p {
-    color: white;
-    font-family: $font;
-    font-size: 130px;
-    text-transform: uppercase;
-    font-weight: lighter;
-    text-align: center;
-    padding-left: 20px;
   }
 
 
+
+// MAIN NAV MENU
   .shelfmenu {
     list-style-type: none;
     text-align: center;
@@ -265,16 +291,16 @@ $size: 20px;
 
 
 
-.search-icon {
-  display: inline-block;
-  height: $size;
-  width: $size;
-  border-radius: 50%;
-  border: $size/10 solid white;
-  position: absolute;
-  right: 12px;
-  top: 8px;
-  z-index: -1;
+  .search-icon {
+    display: inline-block;
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+    border: $size/10 solid white;
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    z-index: -1;
 
   &:after {
     content: '';
@@ -286,23 +312,25 @@ $size: 20px;
     width: $size/2;
     background-color: white;
     border-radius: 10px;
+    }
   }
 }
 }
-
+// DON'T DISPLAY UNTIL MOBILE
 .mobilemenu {
   display:  none;
 }
 
-
+// BOOKS SECTION
 section {
   height: auto;
   clear: both;
+  width: 100%;
 
   .books {
     text-align: center;
     margin-top: 10%;
-    padding: 10px;
+    width: 100%;
   }
 
   div {
@@ -315,24 +343,25 @@ section {
   }
 }
 
-// book image animation
-
+// BOOK IMAGE ANIMATION
 @keyframes bounceIn {
 
-    60% {
-      transform: scale(.8);
-      opacity: 1;
-    }
+  60% {
+    transform: scale(.8);
+    opacity: 1;
+  }
     100% {
       transform: scale(1);
     }
   }
 
+// BOOK HOVER ANIMATION
 .bookimg img:first-of-type:hover {
   animation-duration: .7s;
   animation-name: bounceIn;
 }
 
+// UNDER-BOOK INFORMATION
   h3 {
     font-family: $font;
   }
@@ -346,10 +375,7 @@ section {
     height: auto;
   }
 
-
-
-
-
+// FOOTER
 footer {
   clear: both;
   color: white;
@@ -385,14 +411,13 @@ footer {
     }
 }
 
+// MEDIA QUERIES
 
+// TABLET
 @media (min-width: 600px) and (max-width: 1024px) {
 
-
-
+// HEADER
 header {
-
-
   p {
     font-size: 100px;
   }
@@ -402,6 +427,7 @@ header {
     height: 130px;
   }
 
+// MAIN NAV
   .shelfmenu a {
     font-size: 20px;
     padding: 0px 10px;
@@ -418,7 +444,6 @@ header {
     display: none;
   }
 
-
   .sub-menu a {
     font-size: 20px;
   }
@@ -429,7 +454,7 @@ header {
     margin: 2px;
   }
 
-
+// HAMBURGER MENU
   .hammenu {
     height: 40px;
     width: auto;
@@ -439,7 +464,7 @@ header {
     right: 50px;
   }
 
-
+// SLOGAN
 .slogan h3 {
   font-family: $font;
   color: black;
@@ -447,6 +472,7 @@ header {
   font-weight: lighter;
 }
 
+// SEARCH ICON DISAPPEAR
 .search-icon {
   display: none;
 }
@@ -457,6 +483,7 @@ header {
 
 }
 
+// BOOK SECTION
 section {
   height: auto;
   clear: both;
@@ -480,32 +507,37 @@ section {
 
 }
 
+// MOBILE
 @media (max-width: 599px) {
+
+  // HEADER
   header {
-    height: 250px;
+  height: 250px;
 
-      .hero {
-        height: 75%;
-      }
+    .hero {
+      height: 75%;
+    }
 
-      .slogan {
-        display: none;
-      }
+// SLOGAN
+    .slogan {
+      display: none;
+    }
 
-      .search-icon {
-        display:none;
-      }
+// SEARCH ICON HIDDEN
+    .search-icon {
+      display:none;
+    }
 
-      .search-bar {
-        display:none;
-      }
+    .search-bar {
+      display:none;
+    }
 
-      p {
-        font-size: 60px;
-        padding-top: 120px;
-      }
+    p {
+      font-size: 60px;
+      padding-top: 120px;
+    }
 
-
+// HAMBURGER MENU
     .hammenu {
       position: absolute;
       top: 2%;
@@ -524,6 +556,7 @@ section {
 
   }
 
+// MENU BUTTONS DROPDOWN
   .mobilemenu {
     display: block;
 
@@ -541,71 +574,71 @@ section {
           }
       }
 
-      a {
-        text-decoration: none;
-        color: black;
-        font-family: $font;
-        padding: 0px 30px;
-        margin: 10px;
-        font-size: 30px;
-        border: 2px black solid;
-        border-radius: 7px;
-      }
+    a {
+      text-decoration: none;
+      color: black;
+      font-family: $font;
+      padding: 0px 30px;
+      margin: 10px;
+      font-size: 30px;
+      border: 2px black solid;
+      border-radius: 7px;
+    }
 
-      a:hover {
-        font-weight: bold;
-        color: black;
-      }
+    a:hover {
+      font-weight: bold;
+      color: black;
+    }
 
-      .drop-nav, .drop-nav2{
-        position: absolute;
-        display: none;
-      }
+    .drop-nav, .drop-nav2{
+      position: absolute;
+      display: none;
+    }
 
-      .drop-nav li a, .drop-nav2 li a  {
-        font-size: 25px;
-      }
+    .drop-nav li a, .drop-nav2 li a  {
+      font-size: 25px;
+    }
 
-      .dropdown {
-        a:hover{
-          color: $purple;
-        }
+    .dropdown {
+      a:hover{
+        color: $purple;
       }
+    }
 
-      .dropdown:hover .drop-nav,  {
-        display: block;
-      }
+    .dropdown:hover .drop-nav,  {
+      display: block;
+    }
 
-      .dropdown:hover .drop-nav2,  {
-        display: block;
-      }
+    .dropdown:hover .drop-nav2,  {
+      display: block;
+    }
 
-      .drop-nav li {
-        width: 150px;
-        text-align: right;
-        left: 8%;
-        position: relative;
-      }
+    .drop-nav li {
+      width: 150px;
+      text-align: right;
+      left: 8%;
+      position: relative;
+    }
 
-      .drop-nav2 li {
-        width: 150px;
-        position: relative;
-        left: 110%;
-      }
+    .drop-nav2 li {
+      width: 150px;
+      position: relative;
+      left: 110%;
+    }
 
-      .drop-nav a, .drop-nav2 a {
-        color: black;
-        padding: 20px;
-        font-size: 30px;
-        text-align: left;
-        text-decoration: none;
-        font-family: $font;
-        border: none;
-      }
+    .drop-nav a, .drop-nav2 a {
+      color: black;
+      padding: 20px;
+      font-size: 30px;
+      text-align: left;
+      text-decoration: none;
+      font-family: $font;
+      border: none;
+    }
 
   }
 
-
+// BOOK SECTION
   section {
     height: auto;
     clear: both;
