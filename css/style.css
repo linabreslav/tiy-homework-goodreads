@@ -76,7 +76,7 @@ header {
       padding: 0px 2%;
       bottom: 1%;
       z-index: 1;
-      background-color: rgba(0, 0, 0, 0.6); }
+      background-color: rgba(255, 255, 255, 0.2); }
     header .hero .slogan {
       text-align: left;
       z-index: 500;
@@ -86,7 +86,7 @@ header {
     header .hero .slogan h3 {
       font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
       color: white;
-      font-size: 30px;
+      font-size: 20px;
       font-weight: lighter; }
     header .hero .headerslogan2 {
       font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
