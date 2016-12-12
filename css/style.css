@@ -222,39 +222,6 @@ h4 {
   font-family: "cajito";
   margin: 0; }
 
-.rating {
-  direction: rtl;
-  text-align: left; }
-
-.rating input {
-  display: none; }
-
-.rating label:before {
-  margin: 5px;
-  font-size: 1.25em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005"; }
-
-li {
-  list-style: none; }
-
-.rating label {
-  color: #ddd; }
-
-/***** CSS to Highlight Stars on Hover *****/
-.ratingSelector input:checked ~ label,
-.ratingSelector label:hover,
-.ratingSelector label:hover ~ label {
-  color: #FFD700; }
-
-/* hover previous stars in list */
-.ratingSelector input:checked + label:hover,
-.ratingSelector input:checked ~ label:hover,
-.ratingSelector label:hover ~ input:checked ~ label,
-.ratingSelector input:checked ~ label:hover ~ label {
-  color: #FFED85; }
-
 footer {
   clear: both;
   color: white;
