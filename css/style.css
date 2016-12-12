@@ -205,12 +205,12 @@ section {
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap; }
     section .books .bookimg {
-      max-width: 230px;
-      padding: 4%; }
+      padding: 4%;
+      max-width: 190px; }
     section .books img {
       height: 250px;
       box-sizing: border-box;
-      padding: 10%;
+      padding: 13%;
       border: 2px solid #ededed;
       margin: 2%; }
 
@@ -246,23 +246,22 @@ footer {
   footer a:hover {
     font-weight: bold; }
 
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 700px) and (max-width: 1024px) {
+  margin: 0 auto;
   header {
     height: 300px;
     width: 100%; }
     header .hero .my-slider {
       height: 250px; }
-    header .hero .search-bar {
-      left: 60%; } }
-@media (max-width: 599px) {
+    header .hero .mainnavcontainer .search-bar {
+      left: 53%; } }
+@media (max-width: 699px) {
+  margin: 0 auto;
   header {
     height: 230px; }
     header .hero .my-slider {
       height: 175px; }
-    header .hero .search-bar {
-      display: none; }
-
-  section {
-    padding-top: 10%; } }
+    header .hero .mainnavcontainer .search-bar input {
+      display: none; } }
 
 /*# sourceMappingURL=style.css.map */
