@@ -147,7 +147,7 @@ header {
     background-color: black;
     a:hover {
       background-color: black;
-      text-decoration: underline;
+      text-decoration: line-through;
     }
   }
 
@@ -243,11 +243,38 @@ header {
   }
 }
 
+// NAVIGATION OF GENRES
+.genrenav {
+  text-align: center;
+  li {
+    display: inline;
+    list-style: none;
+    a {
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 2% 2%;
+      text-decoration: none;
+      color: black;
+      font-weight: 900;
+      font-family: $font;
+      font-size: 20px;
+    }
+    a:hover{
+      text-decoration: line-through;
+    }
+  }
+}
+
+#onthisgenre {
+  text-decoration: underline;
+}
+
 // BOOKS SECTION
 section {
   height: auto;
   clear: both;
-  margin: 2%;
+  margin: 1%;
+  margin-top: 5%;
 
 
   .books {
@@ -262,12 +289,13 @@ section {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   .bookimg {
-    margin: 4%;
+    max-width: 230px;
+    padding: 4%;
   }
   img {
-    height: 260px;
+    height: 250px;
     box-sizing: border-box;
-    padding: 12%;
+    padding: 10%;
     border: 2px solid #ededed;
     margin: 2%;
   }
@@ -277,16 +305,58 @@ section {
 // UNDER-BOOK INFORMATION
 h3 {
   font-family: $font;
+  margin: 0;
 }
 
 h4 {
   font-family: $font;
+  margin: 0;
 }
 
-.dots {
-  width: 203px;
-  height: auto;
+.rating {
+  direction: rtl;
+  text-align: left;
 }
+.rating input {
+  display: none;
+}
+.rating label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+li {
+  list-style: none;
+}
+.rating label {
+  color: #ddd;
+}
+/***** CSS to Highlight Stars on Hover *****/
+
+.ratingSelector input:checked ~ label,
+/* show gold star when clicked */
+
+.ratingSelector label:hover,
+/* hover current star */
+
+.ratingSelector label:hover ~ label {
+  color: #FFD700;
+}
+/* hover previous stars in list */
+
+.ratingSelector input:checked + label:hover,
+/* hover current star when changing rating */
+
+.ratingSelector input:checked ~ label:hover,
+.ratingSelector label:hover ~ input:checked ~ label,
+/* lighten current selection */
+
+.ratingSelector input:checked ~ label:hover ~ label {
+  color: #FFED85;
+}
+
 
 // FOOTER
 footer {
@@ -359,5 +429,9 @@ header {
         display: none;
       }
     }
+  }
+
+  section {
+    padding-top: 10%;
   }
 }

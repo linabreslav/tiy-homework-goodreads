@@ -102,7 +102,7 @@ header {
         background-color: black; }
         header .hero .mainnavcontainer .mainnavdrop:hover .mainnavdropitems a:hover {
           background-color: black;
-          text-decoration: underline; }
+          text-decoration: line-through; }
       header .hero .mainnavcontainer .search-bar {
         height: auto;
         width: auto;
@@ -168,10 +168,31 @@ header {
         background-color: white;
         border-radius: 10px; }
 
+.genrenav {
+  text-align: center; }
+  .genrenav li {
+    display: inline;
+    list-style: none; }
+    .genrenav li a {
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 2% 2%;
+      text-decoration: none;
+      color: black;
+      font-weight: 900;
+      font-family: "cajito";
+      font-size: 20px; }
+    .genrenav li a:hover {
+      text-decoration: line-through; }
+
+#onthisgenre {
+  text-decoration: underline; }
+
 section {
   height: auto;
   clear: both;
-  margin: 2%; }
+  margin: 1%;
+  margin-top: 5%; }
   section .books {
     display: -webkit-flex;
     display: flex;
@@ -184,23 +205,55 @@ section {
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap; }
     section .books .bookimg {
-      margin: 4%; }
+      max-width: 230px;
+      padding: 4%; }
     section .books img {
-      height: 260px;
+      height: 250px;
       box-sizing: border-box;
-      padding: 12%;
+      padding: 10%;
       border: 2px solid #ededed;
       margin: 2%; }
 
 h3 {
-  font-family: "cajito"; }
+  font-family: "cajito";
+  margin: 0; }
 
 h4 {
-  font-family: "cajito"; }
+  font-family: "cajito";
+  margin: 0; }
 
-.dots {
-  width: 203px;
-  height: auto; }
+.rating {
+  direction: rtl;
+  text-align: left; }
+
+.rating input {
+  display: none; }
+
+.rating label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005"; }
+
+li {
+  list-style: none; }
+
+.rating label {
+  color: #ddd; }
+
+/***** CSS to Highlight Stars on Hover *****/
+.ratingSelector input:checked ~ label,
+.ratingSelector label:hover,
+.ratingSelector label:hover ~ label {
+  color: #FFD700; }
+
+/* hover previous stars in list */
+.ratingSelector input:checked + label:hover,
+.ratingSelector input:checked ~ label:hover,
+.ratingSelector label:hover ~ input:checked ~ label,
+.ratingSelector input:checked ~ label:hover ~ label {
+  color: #FFED85; }
 
 footer {
   clear: both;
@@ -240,6 +293,9 @@ footer {
     header .hero .my-slider {
       height: 175px; }
     header .hero .search-bar {
-      display: none; } }
+      display: none; }
+
+  section {
+    padding-top: 10%; } }
 
 /*# sourceMappingURL=style.css.map */
