@@ -1,3 +1,6 @@
+@font-face {
+  font-family: 'cajito';
+  src: url("../cajitoregular/Rosario Nocera - cajitoregular.otf"); }
 body {
   margin: 0px;
   padding: 0px;
@@ -63,7 +66,7 @@ header {
       transition: background-color 0.5s ease; }
     header .hero .mainnavcontainer {
       background-color: black;
-      padding-left: 8%;
+      padding-left: 10%;
       padding-bottom: 1%;
       box-shadow: 2px 2px 5px #888888; }
       header .hero .mainnavcontainer ul {
@@ -74,7 +77,8 @@ header {
         text-align: center; }
         header .hero .mainnavcontainer .mainnav .mainnavdrop {
           display: inline;
-          list-style: none; }
+          list-style: none;
+          position: relative; }
           header .hero .mainnavcontainer .mainnav .mainnavdrop a {
             display: inline-block;
             text-decoration: none;
@@ -90,73 +94,59 @@ header {
             font-weight: 900;
             background-color: rgba(255, 255, 255, 0.2);
             transition: background-color 0.5s ease; }
-      header .hero .mainnavcontainer .genrenav {
-        background-color: black;
-        text-align: center; }
-        header .hero .mainnavcontainer .genrenav .genrenavdrop {
-          display: inline;
-          list-style: none; }
-        header .hero .mainnavcontainer .genrenav a {
-          display: inline-block;
-          text-decoration: none;
-          color: white;
+      header .hero .mainnavcontainer .mainnavdrop:hover .mainnavdropitems {
+        display: block;
+        position: absolute;
+        list-style: none;
+        text-align: left;
+        background-color: black; }
+        header .hero .mainnavcontainer .mainnavdrop:hover .mainnavdropitems a:hover {
+          background-color: black;
+          text-decoration: underline; }
+      header .hero .mainnavcontainer .search-bar {
+        height: auto;
+        width: auto;
+        position: relative;
+        left: 70%;
+        top: 18px;
+        display: inline-block;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box; }
+        header .hero .mainnavcontainer .search-bar input {
+          height: 40px;
+          width: 40px;
+          padding: 10px 20px;
+          box-sizing: border-box;
+          font-size: 18px;
           font-family: "cajito";
-          text-transform: uppercase;
-          font-size: 20px;
-          padding: 10px;
-          padding-top: 15px; }
-        header .hero .mainnavcontainer .genrenav a:hover {
-          font-weight: 900;
-          background-color: rgba(255, 255, 255, 0.2);
-          -webkit-transition: background-color 0.5s ease;
-          -moz-transition: background-color 0.5s ease;
-          transition: background-color 0.5s ease; }
-        header .hero .mainnavcontainer .genrenav .genrenavdropitems {
-          display: none; }
-    header .hero .search-bar {
-      height: auto;
-      width: auto;
-      position: relative;
-      left: 67%;
-      top: 18px;
-      display: inline-block;
-      transform: translate(-50%, -50%);
-      box-sizing: border-box; }
-      header .hero .search-bar input {
-        height: 40px;
-        width: 40px;
-        padding: 10px 20px;
-        box-sizing: border-box;
-        font-size: 18px;
-        font-family: "cajito";
-        border: 1.8px solid white;
-        border-radius: 44px;
-        cursor: pointer;
-        background-color: transparent;
-        transition: all 0.5s ease-out;
-        color: transparent; }
-        header .hero .search-bar input::placeholder {
+          border: 1.8px solid white;
+          border-radius: 44px;
+          cursor: pointer;
+          background-color: transparent;
+          transition: all 0.5s ease-out;
           color: transparent; }
-        header .hero .search-bar input:invalid {
-          box-shadow: none; }
-        header .hero .search-bar input:hover {
-          border: 1.8px solid #FFF;
-          box-shadow: 0 0 1.8px 1.8px #EEE; }
-        header .hero .search-bar input:focus, header .hero .search-bar input:valid {
-          width: 300px;
-          border: 1.8px solid #CCC;
-          outline: none;
-          cursor: auto;
-          background-color: #FFF;
-          color: #000; }
-          header .hero .search-bar input:focus::placeholder, header .hero .search-bar input:valid::placeholder {
-            color: #999; }
-          header .hero .search-bar input:focus + .search-icon, header .hero .search-bar input:valid + .search-icon {
-            z-index: 0;
-            border-color: #bebebe;
-            right: 20px; }
-            header .hero .search-bar input:focus + .search-icon:after, header .hero .search-bar input:valid + .search-icon:after {
-              background-color: #CCC; }
+          header .hero .mainnavcontainer .search-bar input::placeholder {
+            color: transparent; }
+          header .hero .mainnavcontainer .search-bar input:invalid {
+            box-shadow: none; }
+          header .hero .mainnavcontainer .search-bar input:hover {
+            border: 1.8px solid #FFF;
+            box-shadow: 0 0 1.8px 1.8px #EEE; }
+          header .hero .mainnavcontainer .search-bar input:focus, header .hero .mainnavcontainer .search-bar input:valid {
+            width: 300px;
+            border: 1.8px solid #CCC;
+            outline: none;
+            cursor: auto;
+            background-color: #FFF;
+            color: #000; }
+            header .hero .mainnavcontainer .search-bar input:focus::placeholder, header .hero .mainnavcontainer .search-bar input:valid::placeholder {
+              color: #999; }
+            header .hero .mainnavcontainer .search-bar input:focus + .search-icon, header .hero .mainnavcontainer .search-bar input:valid + .search-icon {
+              z-index: 0;
+              border-color: #bebebe;
+              right: 20px; }
+              header .hero .mainnavcontainer .search-bar input:focus + .search-icon:after, header .hero .mainnavcontainer .search-bar input:valid + .search-icon:after {
+                background-color: #CCC; }
     header .hero .search-icon {
       display: inline-block;
       height: 18px;
@@ -181,15 +171,26 @@ header {
 section {
   height: auto;
   clear: both;
-  width: 100%; }
+  margin: 2%; }
   section .books {
-    text-align: center;
-    margin-top: 2%; }
-  section div {
-    float: left;
-    padding: 4% 3.5%; }
-  section img {
-    height: 190px; }
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    section .books .bookimg {
+      margin: 4%; }
+    section .books img {
+      height: 260px;
+      box-sizing: border-box;
+      padding: 12%;
+      border: 2px solid #ededed;
+      margin: 2%; }
 
 h3 {
   font-family: "cajito"; }
@@ -232,33 +233,13 @@ footer {
     header .hero .my-slider {
       height: 250px; }
     header .hero .search-bar {
-      left: 60%; }
-
-  section {
-    height: auto;
-    clear: both;
-    padding-left: 4%; }
-    section .books {
-      text-align: center;
-      margin-top: 2%; }
-    section div {
-      float: left;
-      padding: 5% 3%; } }
+      left: 60%; } }
 @media (max-width: 599px) {
   header {
     height: 230px; }
     header .hero .my-slider {
       height: 175px; }
     header .hero .search-bar {
-      display: none; }
-
-  section {
-    height: auto;
-    clear: both; }
-    section .books {
-      margin: 1%; }
-    section div {
-      float: left;
-      padding: 3%; } }
+      display: none; } }
 
 /*# sourceMappingURL=style.css.map */

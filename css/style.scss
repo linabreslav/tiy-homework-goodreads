@@ -1,6 +1,12 @@
 
+@font-face {
+font-family: 'cajito';
+src: url('../cajitoregular/Rosario Nocera - cajitoregular.otf');
+}
+
 $purple: #4a4a93;
 $font: "cajito";
+$size: 18px;
 
 // GENERAL FIXES
 body {
@@ -96,7 +102,7 @@ header {
 // MAIN NAVIGATION MENU
 .mainnavcontainer {
   background-color: black;
-  padding-left: 8%;
+  padding-left: 10%;
   padding-bottom: 1%;
   box-shadow: 2px 2px 5px #888888;
   ul {
@@ -109,6 +115,7 @@ header {
     .mainnavdrop {
       display: inline;
       list-style: none;
+      position: relative;
       a {
         display: inline-block;
         text-decoration: none;
@@ -130,47 +137,29 @@ header {
       }
     }
   }
-  .genrenav {
+
+// DROP-DOWN ITEMS SHOW ON HOVER
+  .mainnavdrop:hover .mainnavdropitems {
+    display: block;
+    position: absolute;
+    list-style: none;
+    text-align: left;
     background-color: black;
-    text-align: center;
-    .genrenavdrop {
-      display: inline;
-      list-style: none;
-      }
-      a {
-        display: inline-block;
-        text-decoration: none;
-        color: white;
-        font-family: $font;
-        text-transform: uppercase;
-        font-size: 20px;
-        padding: 10px;
-        padding-top: 15px;
-        // border: 2px solid white;
-      }
-      a:hover {
-        font-weight: 900;
-        background-color: rgba(white, .20);
-        -webkit-transition: background-color 0.5s ease;
-        -moz-transition: background-color 0.5s ease;
-        transition: background-color 0.5s ease;
-      }
-      .genrenavdropitems {
-        display: none;
-      }
+    a:hover {
+      background-color: black;
+      text-decoration: underline;
     }
   }
 
-
 // SEARCH ICON
 
-$size: 18px;
+
 
 .search-bar {
   height: auto;
   width: auto;
   position: relative;
-  left: 67%;
+  left: 70%;
   top: 18px;
   display: inline-block;
   transform: translate(-50%, -50%);
@@ -222,12 +211,12 @@ $size: 18px;
 
         &:after {
           background-color: #CCC;
+          }
         }
       }
     }
   }
 }
-
   .search-icon {
     display: inline-block;
     height: $size;
@@ -254,27 +243,35 @@ $size: 18px;
   }
 }
 
-
-
 // BOOKS SECTION
 section {
   height: auto;
   clear: both;
-  width: 100%;
+  margin: 2%;
+
 
   .books {
-    text-align: center;
-    margin-top: 2%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  .bookimg {
+    margin: 4%;
   }
-
-  div {
-    float: left;
-    padding: 4% 3.5%;
-  }
-
   img {
-    height: 190px;
+    height: 260px;
+    box-sizing: border-box;
+    padding: 12%;
+    border: 2px solid #ededed;
+    margin: 2%;
   }
+ }
 }
 
 // UNDER-BOOK INFORMATION
@@ -340,29 +337,13 @@ header {
     .my-slider {
       height: 250px;
     }
-    .search-bar {
-      left: 60%;
+      .search-bar {
+        left: 60%;
+      }
     }
   }
 }
 
-// BOOK SECTION
-section {
-  height: auto;
-  clear: both;
-  padding-left: 4%;
-
-  .books {
-    text-align: center;
-    margin-top: 2%;
-  }
-
-    div {
-      float: left;
-      padding: 5% 3%;
-    }
-  }
-}
 
 // MOBILE
 @media (max-width: 599px) {
@@ -379,19 +360,4 @@ section {
       }
     }
   }
-
-// BOOK SECTION
-  section {
-    height: auto;
-    clear: both;
-
-    .books {
-      margin: 1%;
-    }
-
-      div {
-        float: left;
-        padding: 3%;
-      }
-    }
-  }
+}
