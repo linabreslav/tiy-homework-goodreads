@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul, li {
   border: 0px; }
 
 header {
-  height: 350px; }
+  height: 330px; }
   header .nav {
     float: right; }
   header .hero {
@@ -25,7 +25,7 @@ header {
     width: auto;
     z-index: -1; }
     header .hero .my-slider {
-      height: 300px;
+      height: 350px;
       z-index: -1; }
       header .hero .my-slider ul li img {
         width: 100%;
@@ -46,7 +46,7 @@ header {
     header .hero #maintitle {
       color: white;
       font-family: "cajito";
-      font-size: 10vw;
+      font-size: 8vw;
       text-transform: uppercase;
       font-weight: 300;
       padding: 1%;
@@ -59,7 +59,7 @@ header {
       top: 15%;
       border: 3px solid white;
       z-index: 1;
-      background-color: rgba(255, 255, 255, 0.4);
+      background-color: rgba(255, 255, 255, 0.3);
       box-shadow: 0 0 5px white;
       -webkit-transition: background-color 0.5s ease;
       -moz-transition: background-color 0.5s ease;
@@ -188,11 +188,41 @@ header {
 #onthisgenre {
   text-decoration: underline; }
 
+aside {
+  margin: 4%;
+  margin-top: 10%;
+  border: 4px solid #ededed;
+  overflow: hidden;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center; }
+  aside .featuredbookimg img {
+    margin: 10%;
+    margin-left: 12%;
+    height: 360px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px black; }
+  aside .featuredbookimg p {
+    font-size: 30px;
+    font-family: "Didact Gothic", sans-serif;
+    text-align: center;
+    padding-top: 5%; }
+  aside img:hover {
+    opacity: 0.7; }
+  aside .bookdescript {
+    padding: 5%;
+    padding-top: 9%;
+    font-family: "Didact Gothic", sans-serif;
+    font-size: 17px;
+    font-weight: 100; }
+
 section {
-  height: auto;
-  clear: both;
-  margin: 1%;
-  margin-top: 5%; }
+  height: auto; }
   section .books {
     display: -webkit-flex;
     display: flex;
@@ -203,23 +233,28 @@ section {
     -webkit-justify-content: center;
     justify-content: center;
     -webkit-flex-wrap: wrap;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    margin: 0 4%;
+    border: 2px solid #ededed; }
     section .books .bookimg {
-      padding: 4%;
-      max-width: 190px; }
+      padding: 3%;
+      padding-top: 6%;
+      max-width: 185px; }
     section .books img {
       height: 250px;
       box-sizing: border-box;
-      padding: 13%;
+      padding: 10px;
       border: 2px solid #ededed;
-      margin: 2%; }
+      margin: 1%; }
+    section .books img:hover {
+      opacity: 0.7; }
 
 h3 {
-  font-family: "cajito";
+  font-family: "Didact Gothic", sans-serif;
   margin: 0; }
 
 h4 {
-  font-family: "cajito";
+  font-family: "Didact Gothic", sans-serif;
   margin: 0; }
 
 footer {
@@ -246,6 +281,9 @@ footer {
   footer a:hover {
     font-weight: bold; }
 
+.mobilesearch-bar {
+  display: none; }
+
 @media (min-width: 700px) and (max-width: 1024px) {
   margin: 0 auto;
   header {
@@ -254,14 +292,30 @@ footer {
     header .hero .my-slider {
       height: 250px; }
     header .hero .mainnavcontainer .search-bar {
-      left: 53%; } }
+      left: 53%; }
+
+  aside {
+    display: none; } }
 @media (max-width: 699px) {
-  margin: 0 auto;
+  html {
+    margin: 0 auto; }
+
   header {
-    height: 230px; }
+    height: 315px; }
     header .hero .my-slider {
       height: 175px; }
-    header .hero .mainnavcontainer .search-bar input {
-      display: none; } }
+    header .hero .mainnavcontainer {
+      padding-left: 0; }
+      header .hero .mainnavcontainer .search-bar {
+        display: none; }
+    header .hero .genrenav {
+      margin-top: 12%; }
+      header .hero .genrenav a {
+        font-size: 17px; }
+    header .hero img {
+      height: 275px; }
+
+  aside {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
