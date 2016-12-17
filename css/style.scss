@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul, li{
 // HEADER AND HERO
 
 header {
-  height:330px;
+  height:200px;
 
   .nav {
     float: right;
@@ -46,28 +46,44 @@ header {
     width: auto;
     z-index: -1;
 
-  .my-slider {
-    height: 350px;
-    z-index: -1;
+    .heroimage {
+      height: 200px;
+      background:
+      linear-gradient(
+      rgba(white, 0.10),
+      rgba(white, 0.10)
+      ),
+      url("../images/bookchair.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+      z-index: -700;
+      position: relative;
+    }
 
-      ul li img {
-        width: 100%;
-        height: 450px;
-        object-fit: cover;
-        z-index: -1;
-      }
-  }
+  // .my-slider {
+  //   height: 350px;
+  //   z-index: -1;
+  //
+  //     ul li img {
+  //       width: 100%;
+  //       height: 450px;
+  //       object-fit: cover;
+  //       z-index: -1;
+  //     }
+  // }
+  //
+  // .unslider-nav {
+  //   background-color: black;
+  // }
 
-  .unslider-nav {
-    background-color: black;
-  }
   // LOGO
 
   .logo {
-    height: 30%;
+    height:  10vw;
     position: absolute;
-    top: 5%;
-    right: 2%;
+    top: 25%;
+    right: 3%;
     z-index:400;
     border: 2px white solid;
     border-radius: 100%;
@@ -80,31 +96,24 @@ header {
   #maintitle {
     color: white;
     font-family: $font;
-    font-size: 8vw;
+    font-size: 12vw;
     text-transform: uppercase;
     font-weight: 300;
     padding: 1%;
     padding-left: 1%;
-    padding-top: 4%;
     text-align: center;
     position: absolute;
-    left: 15%;
+    left: 10%;
     right: 15%;
-    top: 15%;
-    border: 3px solid white;
+    top: 22%;
     z-index: 1;
-    background-color: rgba(white, .30);
-    box-shadow: 0 0 5px white;
-    -webkit-transition: background-color 0.5s ease;
-    -moz-transition: background-color 0.5s ease;
-    transition: background-color 0.5s ease;
   }
 
 // MAIN NAVIGATION MENU
 .mainnavcontainer {
   background-color: black;
   padding-left: 10%;
-  padding-bottom: 1%;
+  padding-top: .5%;
   box-shadow: 2px 2px 5px #888888;
   ul {
     display: inline;
@@ -125,7 +134,7 @@ header {
         text-transform: uppercase;
         font-size: 20px;
         padding: 10px;
-        padding-top: 15px;
+        padding-top: 4px;
         // border: 2px solid white;
       }
       .mainnavdropitems {
@@ -148,7 +157,7 @@ header {
     background-color: black;
     a:hover {
       background-color: black;
-      text-decoration: line-through;
+      text-decoration: underline;
     }
   }
 
@@ -250,7 +259,7 @@ header {
     a {
       display: inline-block;
       text-transform: uppercase;
-      padding: 2% 2%;
+      padding: 0% 2%;
       text-decoration: none;
       color: black;
       font-weight: 900;
@@ -258,7 +267,7 @@ header {
       font-size: 20px;
     }
     a:hover{
-      text-decoration: line-through;
+      text-decoration: underline;
     }
   }
 }
@@ -270,7 +279,7 @@ header {
 // FEATURED BOOKS SECTION
 aside {
   margin: 4%;
-  margin-top: 10%;
+  margin-top: 8%;
   border: 4px solid #ededed;
   overflow: hidden;
   display: -webkit-flex;
@@ -404,19 +413,25 @@ display: none;
 margin: 0 auto;
 // TITLE RECENTERING
 header {
-  height: 300px;
+  height: 400px;
   width: 100%;
   .hero {
-    .my-slider {
-      height: 250px;
-    }
     .mainnavcontainer .search-bar {
       left: 53%;
     }
    }
   }
+
+  section {
+    .books {
+      margin: 4% 5%;
+    }
+  }
   aside {
     display: none;
+  }
+  .genrenav {
+    padding-top: 10%;
   }
  }
 
@@ -429,10 +444,13 @@ margin: 0 auto;
 }
 
   header {
-    height: 315px;
+    height: 150px;
     .hero {
-      .my-slider {
-        height: 175px;
+      #maintitle {
+        padding-top: 3%;
+      }
+      .heroimage {
+        height: 100px;
       }
 
     .mainnavcontainer {
@@ -449,11 +467,16 @@ margin: 0 auto;
       }
     }
       img {
-      height: 275px;
+      height: 200px;
       }
+    }
+  }
+  section {
+    .books {
+      border: none;
     }
   }
   aside {
     display: none;
+    }
   }
-}

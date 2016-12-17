@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul, li {
   border: 0px; }
 
 header {
-  height: 330px; }
+  height: 200px; }
   header .nav {
     float: right; }
   header .hero {
@@ -24,21 +24,19 @@ header {
     background-repeat: no-repeat;
     width: auto;
     z-index: -1; }
-    header .hero .my-slider {
-      height: 350px;
-      z-index: -1; }
-      header .hero .my-slider ul li img {
-        width: 100%;
-        height: 450px;
-        object-fit: cover;
-        z-index: -1; }
-    header .hero .unslider-nav {
-      background-color: black; }
+    header .hero .heroimage {
+      height: 200px;
+      background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("../images/bookchair.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+      z-index: -700;
+      position: relative; }
     header .hero .logo {
-      height: 30%;
+      height: 10vw;
       position: absolute;
-      top: 5%;
-      right: 2%;
+      top: 25%;
+      right: 3%;
       z-index: 400;
       border: 2px white solid;
       border-radius: 100%;
@@ -46,28 +44,21 @@ header {
     header .hero #maintitle {
       color: white;
       font-family: "cajito";
-      font-size: 8vw;
+      font-size: 12vw;
       text-transform: uppercase;
       font-weight: 300;
       padding: 1%;
       padding-left: 1%;
-      padding-top: 4%;
       text-align: center;
       position: absolute;
-      left: 15%;
+      left: 10%;
       right: 15%;
-      top: 15%;
-      border: 3px solid white;
-      z-index: 1;
-      background-color: rgba(255, 255, 255, 0.3);
-      box-shadow: 0 0 5px white;
-      -webkit-transition: background-color 0.5s ease;
-      -moz-transition: background-color 0.5s ease;
-      transition: background-color 0.5s ease; }
+      top: 22%;
+      z-index: 1; }
     header .hero .mainnavcontainer {
       background-color: black;
       padding-left: 10%;
-      padding-bottom: 1%;
+      padding-top: .5%;
       box-shadow: 2px 2px 5px #888888; }
       header .hero .mainnavcontainer ul {
         display: inline; }
@@ -87,7 +78,7 @@ header {
             text-transform: uppercase;
             font-size: 20px;
             padding: 10px;
-            padding-top: 15px; }
+            padding-top: 4px; }
           header .hero .mainnavcontainer .mainnav .mainnavdrop .mainnavdropitems {
             display: none; }
           header .hero .mainnavcontainer .mainnav .mainnavdrop a:hover {
@@ -102,7 +93,7 @@ header {
         background-color: black; }
         header .hero .mainnavcontainer .mainnavdrop:hover .mainnavdropitems a:hover {
           background-color: black;
-          text-decoration: line-through; }
+          text-decoration: underline; }
       header .hero .mainnavcontainer .search-bar {
         height: auto;
         width: auto;
@@ -176,21 +167,21 @@ header {
     .genrenav li a {
       display: inline-block;
       text-transform: uppercase;
-      padding: 2% 2%;
+      padding: 0% 2%;
       text-decoration: none;
       color: black;
       font-weight: 900;
       font-family: "cajito";
       font-size: 20px; }
     .genrenav li a:hover {
-      text-decoration: line-through; }
+      text-decoration: underline; }
 
 #onthisgenre {
   text-decoration: underline; }
 
 aside {
   margin: 4%;
-  margin-top: 10%;
+  margin-top: 8%;
   border: 4px solid #ededed;
   overflow: hidden;
   display: -webkit-flex;
@@ -287,23 +278,29 @@ footer {
 @media (min-width: 700px) and (max-width: 1024px) {
   margin: 0 auto;
   header {
-    height: 300px;
+    height: 400px;
     width: 100%; }
-    header .hero .my-slider {
-      height: 250px; }
     header .hero .mainnavcontainer .search-bar {
       left: 53%; }
 
+  section .books {
+    margin: 4% 5%; }
+
   aside {
-    display: none; } }
+    display: none; }
+
+  .genrenav {
+    padding-top: 10%; } }
 @media (max-width: 699px) {
   html {
     margin: 0 auto; }
 
   header {
-    height: 315px; }
-    header .hero .my-slider {
-      height: 175px; }
+    height: 150px; }
+    header .hero #maintitle {
+      padding-top: 3%; }
+    header .hero .heroimage {
+      height: 100px; }
     header .hero .mainnavcontainer {
       padding-left: 0; }
       header .hero .mainnavcontainer .search-bar {
@@ -313,7 +310,10 @@ footer {
       header .hero .genrenav a {
         font-size: 17px; }
     header .hero img {
-      height: 275px; }
+      height: 200px; }
+
+  section .books {
+    border: none; }
 
   aside {
     display: none; } }
