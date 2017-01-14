@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'cajito';
-  src: url("../cajitoregular/Rosario Nocera - cajitoregular.otf"); }
+  src: url("../cajitoregular/cajito.otf"); }
 body {
   margin: 0px;
   padding: 0px;
@@ -58,7 +58,8 @@ header {
     header .hero .mainnavcontainer {
       background-color: black;
       padding-left: 10%;
-      padding-top: .5%;
+      padding-top: 1%;
+      padding-bottom: .5%;
       box-shadow: 2px 2px 5px #888888; }
       header .hero .mainnavcontainer ul {
         display: inline; }
